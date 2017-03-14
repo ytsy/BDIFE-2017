@@ -9,7 +9,46 @@ body{
 }
 header{
     background-color:#333333;
+    height:60px;
+    line-height:60px;
 }
-header ul{
-    display:inline;
+nav{
+    width:95%;
+    margin:0 auto;
+}
+nav:after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+nav ul {
+    float:right;
+}
+nav #logo{
+    float:left;
+}
+nav ul li{
+    display:inline-block;
+    padding-left:10px;
+    list-style-type:disc;
+}
+nav a{
+    font-size:12px;
+    text-decoration:none;
+    color:#ffffff;
+}
+nav a:hover{
+    color:#cccccc;
+}
+artical{
+    display:block;
+    width:95%;
+    margin:10px auto;
+    background-color:#ffffff;
+}
+artical h2{
+
+}
+artical h3{
+
 }
