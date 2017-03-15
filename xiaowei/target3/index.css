@@ -3,7 +3,7 @@ html,body{
     margin:0;
 }
 main{
-    width:800px;
+    width:50%;
     min-height:500px;
     margin:0 auto;
     padding:20px;
@@ -26,12 +26,48 @@ main:after{
     height:80px;
 }
 #teamIntroduce{
-    float:left;
-    margin:0 20px;
+    margin:0 140px  0 220px;
 }
 #singleLogo{
-    float:left;
-    right:20px;
+     float:right;
+     right:20px;
+     width:80px;
+     min-height:600px;
+ }
+#singleLogo:after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+.teamlogo{
     width:80px;
-    height:600px;
+    height:80px;
+    float:left;
+}
+#teamName .teamName{
+    padding-left:10px;
+    word-break:break-all;/*此处应该强制换行，否则当asdasdasd4123123的时候不会换行*/
+    width:70px;
+    height:80px;
+    float:right;
+}
+#teamName .team:after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+.teamlogo img{
+    width:100%;
+    height:auto;
+}
+#singleLogo div{
+    width:80px;
+    height:80px;
+}
+#singleLogo div:not(:first-child){
+    margin-top:20px;
+}
+#singleLogo img{
+    width:100%;
+    height:auto;
 }
