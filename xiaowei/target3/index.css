@@ -1,0 +1,37 @@
+html,body{
+    padding:0;
+    margin:0;
+}
+main{
+    width:800px;
+    min-height:500px;
+    margin:0 auto;
+    padding:20px;
+    background-color:#eeeeee;
+    border:1px solid #999999;
+}
+main section{
+    padding:20px;
+    background-color:#ffffff;
+    border:1px solid #666666;
+}
+main:after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+#teamName{
+    float:left;
+    width:160px;
+    height:80px;
+}
+#teamIntroduce{
+    float:left;
+    margin:0 20px;
+}
+#singleLogo{
+    float:left;
+    right:20px;
+    width:80px;
+    height:600px;
+}
