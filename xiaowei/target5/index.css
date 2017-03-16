@@ -1,0 +1,174 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color:#cccccc;
+    width:100%;
+}
+header{
+    background-color:#333333;
+    height:60px;
+    line-height:60px;
+}
+/*清除浮动通用样式*/
+.clear:after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+#logo img{
+    height:100%;
+    width:auto;
+}
+nav{
+    width:95%;
+    margin:0 auto;
+}
+
+nav ul {
+    float:right;
+}
+nav #logo{
+    float:left;
+}
+nav ul li{
+    float:right;
+    margin-left:25px;
+}
+nav a{
+    font-size:12px;
+    text-decoration:none;
+    color:#ffffff;
+}
+nav a:hover{
+    color:#cccccc;
+}
+main{
+    padding:20px;
+}
+.articalWrap{
+    float:left;
+    width:69%;
+}
+.asideWrap{
+    float:right;
+    width:29%;
+}
+artical,aside{
+    display:block;
+    padding:30px 15px;
+    background-color:#ffffff;
+    box-shadow:1px 1px 1px 0 #666666;
+}
+artical h3{
+    color:#666666;
+    margin:15px 0;
+}
+artical .author{
+    text-indent:0;
+    color:#666666;
+    margin-bottom: 15px;
+    font-size:12px;
+}
+artical p{
+    text-indent:2em;
+    line-height:25px;
+}
+artical img{
+    margin:20px 0;
+}
+artical ul{
+    list-style:none;
+    margin-left:20px;
+}
+artical .imageWithTitle{
+    width:122px;
+    height:auto;
+    border:1px solid #cccccc;
+    padding:10px;
+    margin:20px 0;
+}
+artical .imageWithTitle .imageTitle{
+    text-align: center;
+    font-size:12px;
+    margin-bottom:5px;
+}
+artical .imageWithTitle img{
+    width:100%;
+    height:auto;
+    margin:0;
+}
+artical ol{
+    margin-left:40px;
+}
+artical table{
+    width:100%;
+}
+artical table td{
+    border-collapse:collapse;
+    border:1px solid #cccccc;
+    padding:5px;
+}
+artical table th{
+    border-collapse:collapse;
+    border:1px solid #cccccc;
+    padding:3px;
+}
+artical table thead{
+    text-align:left;
+    background-color:#333333;
+    color:#ffffff;
+}
+artical table tfoot{
+    background-color:#cccccc;
+}
+aside h2{
+    height:35px;
+    line-height:35px;
+    font-size:15px;
+    border-left:3px solid #cccccc;
+    padding-left:10px;
+}
+aside table{
+    width:100%;
+}
+aside table td{
+    width:50%;
+}
+aside table tr{
+    height:30px;
+}
+aside table .reminderText{
+    color:#666666;
+    font-size:12px;
+}
+aside table tr td:first-child{
+    text-align:right;
+    padding-right:10px;
+}
+aside table td label{
+    font-size: 12px;
+}
+aside .submitInput{
+    width:100%;
+}
+aside .submitInput input{
+    width:100%;
+    height:40px;
+    background-color: #3355d0;
+    color:#ffffff;
+    font-size:14px;
+    border-radius:7px;
+    margin-top:10px;
+}
+footer{
+    background-color:#000000;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    vertical-align:middle;
+    margin:0 auto;
+    color:#ffffff;
+}
