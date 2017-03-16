@@ -1,0 +1,52 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+.box1,.box2{
+    border:1px solid #666666;
+    padding:20px;
+}
+.box1 div,.box2 div{
+    width:150px;
+    border:1px solid #ff0000;
+}
+.item1{
+    height:120px;
+}
+.item2{
+    height:100px;
+}
+.item3{
+    height:40px;
+}
+.box1 .item4,.box2 .item4{
+    height:200px;
+    border:1px solid #0000ff;
+}
+.box2 .item4{
+    order:1;
+}
+.box2 .item1{
+    order:2
+}
+.box2 .item2{
+    order:3
+}
+.box2 .item3{
+    order:4
+}
+
+.box1{
+    display:-webkit-flex;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+.box2{
+    display:-webkit-flex;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+}
