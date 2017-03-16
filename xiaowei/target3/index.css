@@ -15,7 +15,7 @@ main section{
     background-color:#ffffff;
     border:1px solid #666666;
 }
-main:after{
+main:after,#singleLogo:after,#teamName .team:after{
     content:" ";
     display:block;
     clear:both;
@@ -34,11 +34,6 @@ main:after{
      width:80px;
      min-height:600px;
  }
-#singleLogo:after{
-    content:" ";
-    display:block;
-    clear:both;
-}
 .teamlogo{
     width:80px;
     height:80px;
@@ -50,11 +45,6 @@ main:after{
     width:70px;
     height:80px;
     float:right;
-}
-#teamName .team:after{
-    content:" ";
-    display:block;
-    clear:both;
 }
 .teamlogo img{
     width:100%;
