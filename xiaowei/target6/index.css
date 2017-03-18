@@ -367,3 +367,14 @@ html,body{
     padding:0;
     color:#ffffff;
 }
+footer{
+    position:relative;
+}
+footer div{
+    top:2px;
+    right:0;
+    color:#d55d5c;
+    font-size:12px;
+    font-family:"黑体",sans-serif;
+    position:absolute;
+}
