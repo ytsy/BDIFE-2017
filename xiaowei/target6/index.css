@@ -178,7 +178,6 @@ html,body{
     width:413px;
     height:100%;
     float:left;
-
     overflow: hidden;
 }
 #bottomBlock #introduce1 section{
@@ -248,18 +247,123 @@ html,body{
     padding-top:9px;
     position:absolute;
     bottom:0;
-    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 #bottomBlock #introduce2 .introduce2Img div span{
     display:inline-block;
 }
 #bottomBlock #introduce2 .introduce2Content{
+    position:relative;
     background-color:#eeeed6;
     width:100%;
     height:318px;
     margin-top:30px;
 }
+#bottomBlock #introduce2 .introduce2Content ul{
+    width:80%;
+    padding:0;
+    position:absolute;
+    left:60px;
+}
 #bottomBlock #introduce2 .introduce2Content li{
-    list-style-image:url("images/arrow_03.png");
+    width:100%;
+    border:1px solid #eeeed6;
     margin-top:20px;
+    font-size:12px;
+    line-height:12px;
+    color:#5a5b5b;
+    font-family:"宋体",sans-serif;
+    list-style-image:url("images/arrow_03.png");
+
+}
+#bottomBlock #introduce2 .introduce2Content li span{
+    display:inline-block;
+}
+#bottomBlock #introduce2 .introduce2Content li .introTitle{
+    width:50%;
+    float:left;
+}
+#bottomBlock #introduce2 .introduce2Content li .omit{
+    width:30%;
+    float:left;
+}
+#bottomBlock #introduce2 .introduce2Content li .pagination{
+    font-style:italic;
+    width:20%;
+    float:left;
+    text-align:right;
+}
+#bottomBlock #introduce2 .introduce2Content .bottomLeftBox{
+    width:260px;
+    height:160px;
+    background-color:#d45d5c;
+    position:absolute;
+    left:0;
+    bottom:0;
+    display:table;
+
+}
+#bottomBlock #introduce2 .introduce2Content .bottomRightBox{
+    width:198px;
+    height:160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:absolute;
+    right:0;
+    bottom:0;
+    font-size:14px;
+    color:#5a5b5b;
+    font-family:"黑体",sans-serif;
+    line-height:16px;
+}
+#bottomBlock #introduce2 .introduce2Content .bottomRightBox blockquote{
+    quotes:"\201c" "\201d" "'" "'";
+    margin:0;
+    padding:10px;
+    height:100%;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#bottomBlock #introduce2 .introduce2Content .bottomRightBox blockquote p{
+    margin:0;
+}
+#bottomBlock #introduce2 .introduce2Content .bottomRightBox blockquote:before{
+    content:open-quote;
+    float:left;
+    margin: 15px 10px -25px 0;
+    font-size:72px;
+    color:#d45d5c;
+}
+#bottomBlock #introduce2 .introduce2Content .bottomRightBox blockquote:after{
+    content:close-quote;
+    float:right;
+    margin: 10px 0 -25px 10px;
+    font-size:72px;
+    color:#d45d5c;
+}
+.introduce2Content .bottomLeftBox .content-cell{
+    width:100%;
+    height:86px;
+    border:1px solid #cccccc;
+    display:table-cell;
+    vertical-align: middle;
+    padding:0 10px;
+}
+.introduce2Content .bottomLeftBox .content{
+    height:86px;
+}
+.introduce2Content .bottomLeftBox .content-cell span{
+    height:100%;
+    display:inline-block;
+    vertical-align: middle;
+}
+.introduce2Content .bottomLeftBox .content span p{
+    margin:0;
+    padding:0;
+    color:#ffffff;
 }
