@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+.wrap{
+    width:1280px;
+    margin:0 auto;
+    border:1px solid #d55d5c;
+}
+header .wrap{
+    height:58px;
+}
+main{
+    min-height:1000px;
+}
