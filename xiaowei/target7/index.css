@@ -2,14 +2,95 @@
     margin:0;
     padding:0;
 }
+li{
+    list-style: none;
+}
+a{text-decoration: none;}
 .wrap{
     width:1280px;
     margin:0 auto;
-    border:1px solid #d55d5c;
+}
+header{
+    width:100%;
 }
 header .wrap{
     height:58px;
+    padding:0 60px;
+    box-sizing: border-box;
+}
+.wrap .logo{
+    float:left;
+    height:100%;
+    font-size:21px;
+    color:#393a3a;
+    font-family: 黑体,"Heiti TC", sans-serif;
+    line-height: 58px;
+}
+.wrap .logo img{
+    width:32px;
+    height:32px;
+    margin:13px 10px 0 0;
+    float:left;
+}
+.wrap nav,.wrap .loginButtom{
+    float:right;
+    height:100%;
+    line-height: 58px;
+}
+.wrap nav ul{
+    height:100%;
+}
+.wrap nav li{
+    float:left;
+    height:100%;
+    font-size:14px;
+    font-family:"微软雅黑",sans-serif;
+}
+.wrap nav li a{
+    height:100%;
+    width:100%;
+    padding:0 20px;
+    color:#787b83;
+    display:block;
+}
+.wrap nav li:hover a{
+    color:#e74f4d;
+}
+.wrap nav li:hover {
+    box-sizing:border-box;
+    border-bottom:4px solid #e74f4d;
+}
+.wrap .loginButtom{
+    height:100%;
+    color:#e74f4d;
+    cursor:pointer;
+    font-size:14px;
+    margin-left:10px;
+    line-height:58px;
+    font-family:"微软雅黑",sans-serif;
+}
+.wrap .loginButtom img{
+    width:15px;
+    height:20px;
+    float:left;
+    margin:18px 5px 0 19px;
 }
 main{
     min-height:1000px;
+}
+#banner{
+    width:100%;
+    height:690px;
+    background-image: url("images/1-banner.png");
+}
+#banner .banner-content{
+    margin:auto 0;
+    color:#fff;
+    font-family:"微软雅黑",sans-serif;
+    border:1px solid #000;
+}
+#banner .startButtom{
+    width:330px;
+    height:66px;
+    background-color:#e74f4d;
 }
