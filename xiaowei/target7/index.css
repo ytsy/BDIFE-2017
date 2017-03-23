@@ -96,7 +96,7 @@ main{
 #banner .banner-content{
     float:left;
     margin-left:116px;
-    color:rgba(255,255,255,.8);
+    color:#ffffff;
     font-family:"微软雅黑",sans-serif;
 }
 #banner .startButtom{
@@ -175,4 +175,37 @@ main{
     font-size:54px;
     text-align: center;
     font-family: 黑体, "Heiti TC",sans-serif
+}
+#section4{
+    height:340px;
+    padding-top:50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url("images/4-bgimage.png") no-repeat;
+}
+#section4 .section4-content{
+    width:340px;
+    height:70px;
+    margin:0 auto;
+}
+#section4 .section4-content p{
+    text-align: center;
+    font-family:"微软雅黑",sans-serif;
+    color:rgba(255,255,255,.8);
+}
+#section4 .section4-select{
+    margin:50px auto;
+    height:36px;
+    text-align: center;
+}
+#section4 .section4-select select{
+    height:36px;
+    width:235px;
+}
+#section4 .section4-select a{
+    display:inline-block;
+    height:36px;
+    width:235px;
+    background-color:#be4e48;
 }
