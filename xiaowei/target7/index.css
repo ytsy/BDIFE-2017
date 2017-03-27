@@ -322,7 +322,135 @@ main{
     float:left;
     margin:0;
     padding:0;
+    position:relative;
+    font-family: "黑体", sans-serif;
+    font-size:21px;
+
+}
+#section7 .line{
+    width:30px;
+    margin:20px auto;
+}
+#section7 .box1 .line{
+    border:1px solid #ffffff;
+}
+#section7 .box2 .line{
+    border:1px solid #999999;
+}
+#section7 .section7-box a{
+    width:170px;
+    height:45px;
+    line-height: 45px;
+    display:inline-block;
+}
+
+#section7 .box1,#section7 .box2{
+    text-align: center;
+}
+#section7 .box2:after{
+    content:"";
+    display:block;
+    border-width:14px 0 14px 25px;
+    border-color:transparent transparent transparent #ffffff;
+    border-style: dashed dashed dashed solid;
+    position:absolute;
+    left:100%;
+    top:50%;
+    margin-bottom:14px;
+    z-index: 999999;
 }
 #section7 .box3{
     background: url("images/7-right.png") no-repeat;
+}
+#section8{
+    height:750px;
+}
+#section8 .become{
+    width:425px;
+    height:300px;
+    margin:0 auto;
+    text-align: center;
+}
+#section8 .become h3{
+    font-size:21px;
+    color:#323333;
+    font-family: "黑体", sans-serif;
+}
+#section8 .become .line{
+    margin:10px auto;
+    width:30px;
+    border:1px solid #e74f4d;
+}
+#section8 .become p{
+    font-size: 12px;
+    color:#aaaaaa;
+    font-family: "Microsoft YaHei UI", sans-serif;
+}
+#section8 .formpage{
+    height:295px;
+    width:1010px;
+    margin:0 auto;
+}
+#section8 .formpage aside{
+    width:295px;
+    float:left;
+}
+#section8 .formpage aside div:not(:last-child){
+    margin-bottom:20px;
+}
+#section8 .formpage aside div h4{
+    color:#231815;
+    font-size:14px;
+    font-weight: bold;
+    font-family:"黑体",sans-serif;
+    margin-bottom:15px;
+}
+#section8 .formpage aside div p{
+    color:#ababab;
+    font-size:12px;
+    line-height: 21px;
+    font-family:"宋体",sans-serif;
+}
+#section8 .formpage aside div a{
+    color:#ababab;
+    font-size:12px;
+    line-height: 20px;
+    font-family:"宋体",sans-serif;
+    float: right;
+}
+#section8 .formpage section{
+    width:645px;
+    float:right;
+}
+#section8 .formpage section .tb-tr{
+    width:100%;
+}
+#section8 .formpage section .tb-td{
+    height:35px;
+    width:313px;
+    line-height: 35px;
+    padding:0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #cccccc;
+    border-radius:5px;
+    display:inline-block;
+}
+#connectus{
+    width:100%;
+    height:335px;
+    background-color:#32353e;
+    border-top:1px solid #32353e;
+}
+#connectus .connect-content{
+    height:200px;
+    width:512px;
+    margin:90px auto;
+
+}
+footer{
+    width:100%;
+    height:60px;
+    background-color: #2f2f38;
 }
