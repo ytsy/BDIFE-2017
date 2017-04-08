@@ -300,6 +300,10 @@ main{
     float:right;
     width:430px;
     height:100%;
+    padding:0 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     position:relative;
 }
 #section6 .section6-text:after{
@@ -313,6 +317,58 @@ main{
     top:50%;
     margin-top:-14px;
 }
+#section6 .section6-text h3{
+    text-align: center;
+}
+#section6 .section6-text h3{
+    font-size:22px;
+    font-weight: normal;
+    font-family:"微软雅黑",sans-serif;
+    margin-bottom:15px;
+}
+#section6 .section6-text h3 span{
+    color:#e4666a;
+}
+#section6 .section6-text p{
+    color:#aaaaaa;
+    font-size: 12px;
+    line-height: 30px;
+    font-family: "宋体", sans-serif;
+    margin-bottom:41px;
+}
+
+#section6 .section6-text a{
+    display:block;
+    width:103px;
+    height:33px;
+    line-height: 33px;
+    margin:0 auto;
+    text-align: center;
+    font-size: 12px;
+    color:#e4666a;
+    border:1px solid #e4666a;
+    background-color: #ffffff;
+}
+#section6 .section6-text .dot{
+    margin:25px auto;
+    width:105px;
+    height:16px;
+    line-height: 16px;
+    text-align: center;
+}
+#section6 .section6-text .dot li{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border:2px solid #929292;
+    border-radius:7px;
+    margin:0 5px;
+    cursor:pointer;
+}
+#section6 .section6-text .dot li:hover{
+    background-color:#aaaaaa ;
+}
+
 #section7 {
     height:520px;
 }
@@ -424,18 +480,73 @@ main{
 }
 #section8 .formpage section .tb-tr{
     width:100%;
+    margin-bottom:10px;
 }
+#section8 .formpage section .tb-tr .tb-td:first-child{
+    margin-right:13px;
+}
+
 #section8 .formpage section .tb-td{
     height:35px;
     width:313px;
     line-height: 35px;
     padding:0 10px;
+    font-size: 12px;
+    word-spacing: 3px;
+    color:#231815;
+    font-family: "宋体", sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #cccccc;
     border-radius:5px;
+    background-color: #ededee;
     display:inline-block;
+}
+#section8 .tb-td input{
+   width:210px;
+   margin-left:10px;
+   height:20px;
+   color:#000000;
+   border:none;
+   background-color: #ededee;
+   font-family: "宋体", sans-serif;
+
+}
+#section8 .tb-tr .textarea-title{
+    font-size: 12px;
+    word-spacing: 3px;
+    color:#231815;
+    font-family: "宋体", sans-serif;
+    padding:10px 0 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#section8 .tb-tr textarea{
+    font-size: 12px;
+    word-spacing: 3px;
+    color:#231815;
+    background-color: #ededed;
+    border:none;
+    font-family: "宋体", sans-serif;
+    text-align: left;
+    width:100%;
+    height:122px;
+    padding:0 10px;
+    line-height: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#section8 .submit-apply a{
+   display:block;
+   text-align: center;
+   background-color:#ededed;
+    height:40px;
+    line-height: 40px;
+    font-family: "Heiti TC", 黑体, sans-serif;
+    font-size: 14px;
+    cursor:pointer;
 }
 #connectus{
     width:100%;
@@ -447,10 +558,55 @@ main{
     height:200px;
     width:512px;
     margin:90px auto;
-
+    text-align: center;
+    color:#ffffff;
+}
+#connectus .connect-submit{
+    width:100%;
+    height:40px;
+    margin-top:15px;
+}
+#connectus .connect-submit input{
+    float:left;
+    height:100%;
+    font-size:14px;
+    color:#aaaaaa;
+    padding:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:80%;
+    border:none;
+}
+#connectus .connect-submit a{
+    float:left;
+    height:100%;
+    line-height: 40px;
+    width:20%;
+    color:#ffffff;
+    background-color: #6f7278;
+}
+#connectus .connect-content h3{
+    font-size:21px;
+    line-height: 48px;
+    font-family: "Heiti TC", 黑体, sans-serif;
+}
+#connectus .connect-content p{
+    font-size:12px;
+    line-height: 18px;
+    font-family: 宋体,sans-serif;
 }
 footer{
     width:100%;
     height:60px;
+    line-height: 60px;
     background-color: #2f2f38;
+}
+footer .wrap span{
+    float:left;
+    color:#ffffff;
+}
+footer .wrap a{
+    float:right;
+    color:#ffffff;
 }
