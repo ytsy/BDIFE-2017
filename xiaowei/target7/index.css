@@ -510,7 +510,7 @@ main{
    border:none;
    background-color: #ededee;
    font-family: "宋体", sans-serif;
-
+   outline:none;
 }
 #section8 .tb-tr .textarea-title{
     font-size: 12px;
@@ -537,6 +537,7 @@ main{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline:none;
 }
 #section8 .submit-apply a{
    display:block;
@@ -577,6 +578,7 @@ main{
     box-sizing: border-box;
     width:80%;
     border:none;
+
 }
 #connectus .connect-submit a{
     float:left;
