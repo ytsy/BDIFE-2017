@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article{
+    width:680px;
+    margin:0 auto;
+}
+article header{
+    height:80px;
+    margin:10px 0;
+    border-top:1px solid rgba(190,190,190,.6)
+}
+header h4{
+    color:#e74f4d;
+}
+table tbody tr:nth-child(2n){
+    background-color: #cccccc;
+}
+table tbody tr:nth-of-type(-n+3){
+    color:red;
+}
+#animation section{
+    width:300px;
+    height:150px;
+    border:1px solid #ccc;
+
+}
+
+#animation .bannerBox{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
+}
+#banner{
+    width:300%;
+    height:100%;
+    -webkit-transform: translate3D(0,0,0);
+    -moz-transform: translate3D(0,0,0);
+    -ms-transform: translate3D(0,0,0);
+    -o-transform: translate3D(0,0,0);
+    transform: translate3D(0,0,0);
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+    z-index:10;
+}
+#animation .bannerBox #banner div{
+    width:33.3%;
+    height:100%;
+    float:left;
+}
+#border-animation form input{
+    width:125px;
+    height:25px;
+    border:1px solid #00b3ee;
+    border-radius:5px;
+    outline:none;
+    transition:width 0.5s;
+}
+#border-animation form input:focus{
+    width:250px;
+    transition:all 0.5s;
+
+}
+#animation .bannerBox #banner div[data-color="red"]{
+    background-color: red;
+}
+#animation .bannerBox #banner div[data-color="green"]{
+    background-color: green;
+}
+#animation .bannerBox #banner div[data-color="yellow"]{
+    background-color: yellow;
+}
+#bt-control1,#bt-control2,#bt-control3,
+#control1,#control2,#control3{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    bottom:5px;
+    position:absolute;
+    background-color: rgba(255,255,255,.3);
+    cursor:pointer;
+}
+#control1,#control2,#control3{
+    z-index:99;
+}
+#bt-control1,#bt-control2,#bt-control3{
+    z-index:100;
+    opacity: 0;
+}
+#control3,#bt-control3{ right:5px;}
+#control2,#bt-control2{ right:30px;}
+#control1,#bt-control1{ right:55px;}
+#animation .bannerBox input:checked + a{
+    background-color: rgba(255,255,255,1);
+}
+#animation .bannerBox #bt-control1:checked ~ #banner{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+}
+#animation .bannerBox #bt-control2:checked ~ #banner{
+    -webkit-transform: translateX(-33.3%);
+    -moz-transform: translateX(-33.3%);
+    -ms-transform: translateX(-33.3%);
+    -o-transform: translateX(-33.3%);
+    transform: translateX(-33.3%);
+}
+#animation .bannerBox #bt-control3:checked ~ #banner{
+    -webkit-transform: translateX(-66.6%);
+    -moz-transform: translateX(-66.6%);
+    -ms-transform: translateX(-66.6%);
+    -o-transform: translateX(-66.6%);
+    transform: translateX(-66.6%);
+}
