@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <title>斌斌学院-任务二-零基础JavaScript编码</title>
+    </head>
+<body>
+    <h1 style="color:red;height:30px;line-height: 30px;">实现了对数据的排序与过滤，对城市名按拼音排序只在IE下能实现</h1>
+    <input type="radio" name="order" id="ascOrder" value="asc" checked>
+    <label for="ascOrder">按城市名升序排列</label>
+    <input type="radio" name="order" id="descOrder" value="desc">
+    <label for="descOrder">按城市名降序排列</label>
+    &nbsp;污染指数
+    <select id="filterCondition">
+        <option value=">">&gt;</option>
+        <option value="<=">&lt;=</option>
+    </select>
+    <input type="text" placeholder="0" id="filterData">
+    <input type="button" id="resultFunction" value="生成结果" >
+    <input type="button" id="initFunction" value="初始化"  >
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+
+    </ul>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
