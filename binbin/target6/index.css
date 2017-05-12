@@ -7,14 +7,24 @@ section{
     height:100px;
     line-height: 100px;
     text-align: center;
+    margin:0 auto;
 }
 section button{
     height:20px;
     line-height: 20px;
 }
+section textarea{
+    height:100%;
+    width:200px;
+    outline:none;
+    border:1px solid #00b3ee;
+    border-radius:5px;
+    box-shadow: 0 0 0 2px #00b3ee;
+    overflow: auto;
+}
 #source li{
     display:inline-block;
-    width:200px;
+    width:100px;
     height:50px;
     line-height: 50px;
     text-align: center;
@@ -22,5 +32,8 @@ section button{
     background-color:#0000ed;
     border-radius:5px;
     border:2px solid #00b3ee;
-    margin:0 10px;
+    margin:5px 10px;
+}
+#source li.redBg{
+    background-color:red;
 }

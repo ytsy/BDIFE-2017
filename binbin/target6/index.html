@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>斌斌学院-任务六-基础JavaScript练习三</title>
+        <link href="index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <section>
+            <textarea id="inputData" placeholder="请在此输入数据，可使用(逗号)(回车)(顿号)(空格)等符号进行分隔。"></textarea>
+            <button id="left-in" onclick="showNumber('leftin');">左侧入</button>
+            <button id="right-in" onclick="showNumber('rightin');">右侧入</button>
+            <button id="left-out" onclick="showNumber('leftout');">左侧出</button>
+            <button id="right-out" onclick="showNumber('rightout');">右侧出</button>
+            <input type="text" id="condition" >
+            <input type="button" id="searchFuc" value="点击查询" onclick="searchFunction()">
+        </section>
+        <ul id="source">
+
+        </ul>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

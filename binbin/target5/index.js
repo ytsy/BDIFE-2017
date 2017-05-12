@@ -154,32 +154,21 @@ function insertErrorMsg(dom,msg,ifshow){
     }
 }
 
-//排序
-function popSort(){
+//冒泡排序//可视化
+function popSort(time){
     var ul =document.getElementById("source");
     var children = ul.children;
     if(ul.childElementCount>=2){
-        /*for(var i=children.length-1;i>0;i--){
-            for(var j=0;j<i;j++){
-                if(children[j].textContent>children[j+1].textContent){
-                    setTimeout(function(children,j){
-                        ul.insertBefore(children[j+1],children[j]);
-                    },1000,children,j);
-                }
-            }
-        }*/
         var beginindex = 0;
         var endindex = children.length-1;
         var ifchangeColor= true;
         var timer = setTimeout(function(){
             if(beginindex==endindex){
                 clearTimeout(timer);//循环到最后退出循环,恢复颜色
-                for(var n=0;n<children.length;n++){
-                    children[n].setAttribute("class","");
-                }
+                for(var n=0;n<children.length;n++){children[n].setAttribute("class","");}
                 console.log("排序完成。");
             }else if(beginindex<=endindex-1){
-                //变色
+                //是否变色
                 if(ifchangeColor){
                     changeColor(children[beginindex],children[beginindex+1]);
                     //变色之后下一轮为数据对比
@@ -189,23 +178,33 @@ function popSort(){
                     if(children[beginindex].textContent>children[beginindex+1].textContent){
                         changeindex(ul,children[beginindex],children[beginindex+1]);
                     }
+                    //已经是最后两个节点交换了，重新从头开始循环
                     if(beginindex==endindex-1){
                         children[beginindex].setAttribute("class","");
                         beginindex=0;
                         endindex--;
-                    }else{
-                        beginindex++;
-                    }
+                    }else{beginindex++;}
                     //数据对比之后下一轮是变色
                     ifchangeColor=true;
                 }
-                timer = setTimeout(arguments.callee,1000);//继续循环
+                timer = setTimeout(arguments.callee,time);//继续循环
             }
-        },1000);
+        },time);
     }else{
         alert("请添加数据。");
     }
 }
+/*非可视化冒泡排序
+for(var i=children.length-1;i>0;i--){
+     for(var j=0;j<i;j++){
+         if(children[j].textContent>children[j+1].textContent){
+             setTimeout(function(children,j){
+                 ul.insertBefore(children[j+1],children[j]);
+                 },1000,children,j);
+             }
+         }
+     }
+ */
 //改变颜色
 function changeColor(dom1,dom2){
     if(dom1.previousElementSibling){
@@ -218,6 +217,6 @@ function changeColor(dom1,dom2){
 function changeindex(parent,dom1,dom2){
     parent.insertBefore(dom2,dom1);
 }
-//定时执行
+
 
 
