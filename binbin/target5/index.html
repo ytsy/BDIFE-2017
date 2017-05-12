@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>斌斌学院-任务五-基础JavaScript练习二</title>
+        <link href="index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <section>
+            <input type="text" id="inputNumber" placeholder="0" oninput="verify(this);" >
+            <button id="left-in" onclick="addNumber('leftin');" >左侧入</button>
+            <button id="right-in" onclick="addNumber('rightin');">右侧入</button>
+            <button id="left-out" onclick="addNumber('leftout');">左侧出</button>
+            <button id="right-out" onclick="addNumber('rightout');">右侧出</button>
+            <button id="sort" onclick="popSort();">冒泡排序</button>
+            <span id="blockNumber"></span>
+        </section>
+        <ul id="source">
+
+        </ul>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

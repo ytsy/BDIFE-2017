@@ -1,0 +1,72 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+section{
+    width:50%;
+    height:100px;
+    line-height: 100px;
+    text-align: center;
+    margin:0 auto;
+    position:relative;
+}
+section button{
+    height:20px;
+    line-height: 20px;
+}
+#source{
+    width:50%;
+    height:150px;
+    margin:0 auto;
+    display:flex;
+    display:-webkit-flex;
+
+    align-items:flex-end;
+}
+#source li{
+    width:1.5em;
+    display:inline-block;
+    flex-direction: column;
+    line-height:1em;
+    text-align: center;
+    word-wrap: break-word;/*另起一行断句*/
+    word-break: normal;/*break-all简单粗暴直接截断*/
+    color:#fff;
+    background-color:#0000ed;
+    border-radius:5px;
+    border:2px solid #00b3ee;
+    margin-left:5px;
+}
+.errorMsg{
+    position:absolute;
+    height: 1.5em;
+    line-height: 1.5em;
+    padding:5px;
+    color:#ffffff;
+    background-color: red;
+    border-radius:5px;
+    box-shadow:0 0 0 2px #e74f4d;
+}
+.errorMsg:after{
+    content:"";
+    display:block;
+    border:5px solid;
+    border-color:transparent transparent red transparent;
+    position:absolute;
+    top:-10px;
+    left:10%;
+}
+.errorMsg:before{
+    content:"";
+    display:block;
+    border:5px solid;
+    border-color:transparent transparent red transparent;
+    position:absolute;
+    top:-10px;
+    left:10%;
+}
+#source li.redBG{
+    background-color: #e74f4d;
+}
+
