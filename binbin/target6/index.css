@@ -21,6 +21,7 @@ section textarea{
     border-radius:5px;
     box-shadow: 0 0 0 2px #00b3ee;
     overflow: auto;
+    resize:none;
 }
 #source li{
     display:inline-block;
