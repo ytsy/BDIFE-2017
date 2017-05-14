@@ -45,14 +45,14 @@ function Tree(n){
         'use strict';
         this.index = index++;
         this.dom = document.createElement("div");
-        this.dom.textContent = data;
+        this.dom.innerHTML = "<span>"+data+"</span>";
         this.dom.setAttribute("id","treeNode-"+this.index);
         this.children = [];//默认为任意节点数组
     }
-
-
-
 }
+/* *
+ *二叉树遍历
+ * */
 //先序遍历
 Tree.prototype.perOrder = function(node){
 
@@ -88,6 +88,7 @@ Tree.prototype.postOrder = function(node){
         return this.orderNodes;
     }
 };
+
 //生成一个N叉树，如果是一个二叉树还需要进行左右节点大小判断
 function buildTree(node){
     if(node.index==0){
@@ -129,24 +130,95 @@ function seeChange(nodes,time){
         }
     },time);
 }
+//将查询可视化
+function seeSearchChange(nodes,condition,time){
+    nodes.forEach(function(elem){
+        elem.dom.style.backgroundColor = "#ffffff";
+    });
+    var hasChange =false;
+    var rightNowIndex = 0;
+    var buttons = document.querySelectorAll("nav input[type='button']:not([id='research'])");
+    var matchNodes=[];//匹配的节点
+    Array.prototype.forEach.call(buttons,function(elem){
+        elem.disabled = "disabled";
+    });//按钮不可按
+    var timer = setTimeout(function(){
+        if(!nodes[rightNowIndex]){
+            clearTimeout(timer);
+            Array.prototype.forEach.call(buttons,function(elem){
+                elem.removeAttribute("disabled");
+            });//按钮可按
+            if(matchNodes.length==0){alert("未找到匹配节点");}
+        }else{
+            if(!hasChange){
+                nodes[rightNowIndex].dom.style.backgroundColor = "red";
+                console.log(nodes[rightNowIndex].dom.firstChild.textContent);
+                console.log(condition);
+                console.log(nodes[rightNowIndex].dom.firstChild.textContent.search(condition));
+                if(nodes[rightNowIndex].dom.firstChild.textContent.search(condition)>=0){
+                    matchNodes.push(nodes[rightNowIndex]);
+                    rightNowIndex++;//下一个节点
+                }else{
+                    hasChange = true;
+                }
+            }else{
+                nodes[rightNowIndex].dom.style.backgroundColor = "#ffffff";
+                hasChange = false;
+                rightNowIndex++;
+            }
+            timer = setTimeout(arguments.callee,time);
+        }
+    },time);
+}
 //树的遍历事件
 function changeTree(order){
-    binaryTree.clearOrderNodes();//清空树的遍历数组
+    //binaryTree.clearOrderNodes();//清空树的遍历数组
+    tree.clearOrderNodes();//清空树的遍历数组
     switch(order){
         case "perOrder":
-            seeChange(binaryTree.perOrder(binaryTree.root),500);
+            if(tree.pageN==2){
+                seeChange(tree.perOrder(binaryTree.root),500);
+            }
             break;
         case "inOrder":
-            seeChange(binaryTree.inOrder(binaryTree.root),500);
+            if(tree.pageN==2){
+                seeChange(tree.inOrder(binaryTree.root),500);
+            }
             break;
         case "postOrder":
-            seeChange(binaryTree.postOrder(binaryTree.root),500);
+            if(tree.pageN==2){
+                seeChange(tree.postOrder(binaryTree.root),500);
+            }
+            break;
+        default:
+            seeChange(tree.nodes,500);//默认按照添加顺序遍历
             break;
     }
 }
-
+function search(){
+    var condition = document.getElementById("condition").value;
+    //非二叉树的情况下直接按节点顺序遍历
+    if(condition){
+        seeSearchChange(tree.nodes,condition,500);
+    }
+}
+var tree = new Tree(4);
+tree.insert("fruit");
+tree.insert("phone");
+tree.insert("fruit");
+tree.insert("xiaomi");
+tree.insert("xigua");
+tree.insert("phone");
+tree.insert("iphone");
+tree.insert("nokia");
+tree.insert("mi");
+tree.insert("chuizi");
+tree.insert("xiaomi");
+tree.insert("xigua");
+tree.root.dom.setAttribute("style","width:100%;height:100%;border:none;");
+buildTree(tree.root);
 //手动生成一个二叉树
-var binaryTree = new Tree(2);
+/*var binaryTree = new Tree(2);
 binaryTree.insert(1);
 binaryTree.insert(2);
 binaryTree.insert(3);
@@ -155,5 +227,5 @@ binaryTree.insert(5);
 binaryTree.insert(6);
 binaryTree.insert(7);
 binaryTree.root.dom.setAttribute("style","width:100%;height:100%;border:none;");
-buildTree(binaryTree.root);
+buildTree(binaryTree.root);*/
 
