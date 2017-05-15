@@ -11,9 +11,11 @@ html,body{
 }
 body{
     position:relative;
+    padding-top:50px;
 }
 nav{
-    width:300px;
+    text-align:center;
+    width:50%;
     margin:0 auto;
 }
 section{
@@ -39,6 +41,8 @@ section div{
     border:1px solid;
     width:48%;
     height:85%;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 section div span{
     position:absolute;

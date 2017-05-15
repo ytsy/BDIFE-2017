@@ -52,20 +52,22 @@ function Tree(n){
 }
 /* *
  *二叉树遍历
+ * 深度优先遍历
  * */
 //先序遍历
 Tree.prototype.perOrder = function(node){
-
+    var that = this;
     if(node){
         this.orderNodes.push(node);
-        this.perOrder(node.children[0]);
-        this.perOrder(node.children[1]);
+        node.children.forEach(function(node){
+            that.perOrder(node)
+        });
     }
     if(this.orderNodes.length==this.nodes.length){
         return this.orderNodes;
     }
 };
-//中序遍历
+//二叉树中序遍历
 Tree.prototype.inOrder = function(node){
 
     if(node) {
@@ -79,16 +81,29 @@ Tree.prototype.inOrder = function(node){
 };
 //后序遍历
 Tree.prototype.postOrder = function(node){
+    var that = this;
     if(node) {
-        this.postOrder(node.children[0]);
-        this.postOrder(node.children[1]);
+        node.children.forEach(function(node){
+            that.postOrder(node);
+        });
         this.orderNodes.push(node);
     }
     if(this.orderNodes.length==this.nodes.length){
         return this.orderNodes;
     }
 };
-
+//广度优先遍历
+Tree.prototype.wideOrder = function(node){
+    if(node){
+        this.orderNodes.push(node);
+        if(node.children.length>0){
+            this.orderNodes.concat(node.children);
+        }
+    }
+    if(this.orderNodes.length==this.nodes.length){
+        return this.orderNodes;
+    }
+};
 //生成一个N叉树，如果是一个二叉树还需要进行左右节点大小判断
 function buildTree(node){
     if(node.index==0){
@@ -137,7 +152,7 @@ function seeSearchChange(nodes,condition,time){
     });
     var hasChange =false;
     var rightNowIndex = 0;
-    var buttons = document.querySelectorAll("nav input[type='button']:not([id='research'])");
+    var buttons = document.querySelectorAll("nav input[type='button']");
     var matchNodes=[];//匹配的节点
     Array.prototype.forEach.call(buttons,function(elem){
         elem.disabled = "disabled";
@@ -152,9 +167,6 @@ function seeSearchChange(nodes,condition,time){
         }else{
             if(!hasChange){
                 nodes[rightNowIndex].dom.style.backgroundColor = "red";
-                console.log(nodes[rightNowIndex].dom.firstChild.textContent);
-                console.log(condition);
-                console.log(nodes[rightNowIndex].dom.firstChild.textContent.search(condition));
                 if(nodes[rightNowIndex].dom.firstChild.textContent.search(condition)>=0){
                     matchNodes.push(nodes[rightNowIndex]);
                     rightNowIndex++;//下一个节点
@@ -172,23 +184,21 @@ function seeSearchChange(nodes,condition,time){
 }
 //树的遍历事件
 function changeTree(order){
-    //binaryTree.clearOrderNodes();//清空树的遍历数组
     tree.clearOrderNodes();//清空树的遍历数组
     switch(order){
         case "perOrder":
-            if(tree.pageN==2){
-                seeChange(tree.perOrder(binaryTree.root),500);
-            }
+            seeChange(tree.perOrder(tree.root),500);
             break;
         case "inOrder":
             if(tree.pageN==2){
-                seeChange(tree.inOrder(binaryTree.root),500);
+                seeChange(tree.inOrder(tree.root),500);
             }
             break;
         case "postOrder":
-            if(tree.pageN==2){
-                seeChange(tree.postOrder(binaryTree.root),500);
-            }
+            seeChange(tree.postOrder(tree.root),500);
+            break;
+        case "wideOeder":
+                seeChange(tree.wideOrder(tree.root),500);
             break;
         default:
             seeChange(tree.nodes,500);//默认按照添加顺序遍历
