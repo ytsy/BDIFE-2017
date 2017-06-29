@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style: none;
+
+}
+main{
+    width:80%;
+    height:80%;
+    margin:0 auto;
+}
+article{
+    margin:20px 0;
+}
+#xw .row div a{
+    background-color:rgba(46, 125, 50,1.0);
+}
+#xw header{
+    color:rgba(46, 125, 50,1.0);
+    border-bottom:2px solid rgba(46, 125, 50,1.0);
+}
+#bb .row div a{
+    background-color:rgba(255, 87, 34,1.0);
+}
+#bb header{
+    color:rgba(255, 87, 34,1.0);
+    border-bottom:2px solid rgba(255, 87, 34,1.0);
+}
+#nm .row div a{
+    background-color:rgba(21, 101, 192,1.0);
+}
+#nm header{
+    color:rgba(21, 101, 192,1.0);
+    border-bottom:2px solid rgba(21, 101, 192,1.0);
+}
+article header{
+    height:50px;
+    line-height:50px;
+    font-family:"Microsoft YaHei",sans-serif;
+}
+
+section .row div{
+    border:none;
+}
+section .row div a{
+    display:block;
+    width:100%;
+    height:150px;
+    text-align: center;
+    text-decoration: none;
+    color:#ffffff;
+    padding-top:10px;
+}
+section .row div a h2{
+    height:50px;
+    line-height: 50px;
+}
+section .row div a p{
+    padding:0 15px;
+}

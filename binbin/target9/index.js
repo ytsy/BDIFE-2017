@@ -53,6 +53,7 @@ function Tree(n){
         //通过for循环遍历每一个节点然后插入
         for(var i=0;i<tree.nodes.length;i++){
             if(tree.nodes[i].children.length<pageN){
+                newNode.parentNode = tree.nodes[i];
                 tree.nodes[i].children.push(newNode);
                 tree.nodes.push(newNode);
                 return;
@@ -62,6 +63,7 @@ function Tree(n){
 
     function Node(data){
         'use strict';
+        this.parentNode = null;
         this.index = index++;
         this.dom = document.createElement("div");
         this.dom.innerHTML = "<span>"+data+"</span>";
@@ -69,11 +71,18 @@ function Tree(n){
         this.dom.addEventListener("click",function(e){
             var event = e||window.event;
             var target = event.target||event.srcElement;
-            if(clickTarget){
+            if(clickTarget&&clickTarget!=target){
                 clickTarget.style.backgroundColor = "#ffffff";
             }
-            target.style.backgroundColor = "green";//选中的节点为绿色
-            clickTarget = target;
+            if(target.style.backgroundColor=="green"){
+                target.style.backgroundColor = "#ffffff";
+                clickTarget = null;
+            }else{
+                target.style.backgroundColor = "green";//选中的节点为绿色
+                clickTarget = target;
+            }
+
+            event.stopPropagation();
         },false);
         this.children = [];//默认为任意节点数组
         this.getChildrenLength = function(){
@@ -154,8 +163,8 @@ function buildTree(node){
 //删除dom节点
 function deleteNodeDom(){
    /* var node = tree.getClickTargetNode();
-    node.dom.parentNode.removeChild(node.dom);
-    deleteNode(node);*/
+     node.dom.parentNode.removeChild(node.dom);
+     deleteNode(node);*/
     tree.nodes.forEach(function(node){
         if(node.dom == tree.getClickTarget()){
             node.dom.parentNode.removeChild(node.dom);
@@ -166,12 +175,20 @@ function deleteNodeDom(){
 }
 //删除tree中的node以及该node的children
 function deleteNode(node){
+
     if(node.getChildrenLength()>0){
         node.children.forEach(function(node){
             deleteNode(node);
         });
     }
     var targetNode = node;
+    //在父节点中删除此节点
+    targetNode.parentNode.children.forEach(function(node,index){
+       if(targetNode==node){
+           targetNode.parentNode.children.splice(index,1);
+       }
+    });
+    //在tree中删除此节点
     tree.nodes.forEach(function(node,index){
         if(node==targetNode){
             tree.nodes.splice(index,1);//改变原数组的删除方法
@@ -200,6 +217,7 @@ function seeChange(nodes,time){
     Array.prototype.forEach.call(buttons,function(elem){
         elem.disabled = "disabled";
     });//按钮不可按
+    console.log(nodes);
     var timer = setTimeout(function(){
         if(!nodes[rightNowIndex]){
             clearTimeout(timer);
@@ -263,7 +281,7 @@ function changeTree(order){
         case "perOrder":
             seeChange(tree.perOrder(tree.root),500);
             break;
-        case "inOrder":
+        case "inOrder"://二叉树才有中序遍历
             if(tree.pageN==2){
                 seeChange(tree.inOrder(tree.root),500);
             }

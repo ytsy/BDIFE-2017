@@ -162,7 +162,7 @@ function popSort(time){
         var beginindex = 0;
         var endindex = children.length-1;
         var ifchangeColor= true;
-        var timer = setTimeout(function(){
+        var timer = setTimeout(function(){ 
             if(beginindex==endindex){
                 clearTimeout(timer);//循环到最后退出循环,恢复颜色
                 for(var n=0;n<children.length;n++){children[n].setAttribute("class","");}
